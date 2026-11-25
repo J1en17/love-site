@@ -1,0 +1,7 @@
+把照片文件放在这个目录里（如 first-date-1.jpg）。
+
+然后在 js/data.js 中把文件名填到对应位置：
+  avatarMe / avatarPartner        → 首页两颗头像
+  albums[].photos[].file          → 相册照片（配合 caption 小标题）
+  diaries[].file                  → 点滴缩略图
+留 null 时页面显示占位图，二次编辑时替换即可。
