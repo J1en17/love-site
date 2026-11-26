@@ -36,13 +36,24 @@ python -m http.server 8000
 
 ## 部署到公网（让 TA 也能打开）
 
-零后端静态站，任何静态托管都行：
+本站已部署在 **GitHub Pages**，公网地址：
 
-- **GitHub Pages**：建仓 `love-site` 推上去，Settings → Pages → 选 main 分支 /root。
+**https://j1en17.github.io/love-site/**
+
+把这个链接发给任何人，打开即是网站最新内容。
+
+### 一键更新（实时编辑）
+
+改完 `js/data.js`（或照片、样式等）后，**双击 `更新网站.bat`**，约 1–2 分钟线上生效——无需任何操作、无需代理。
+
+- 脚本自动把本地全部文件上传到 GitHub，等待 Pages 重建完成后提示。
+- 原理：本地文件 → GitHub 仓库 → Pages 自动构建 → 公网链接刷新即新内容。
+- 电脑上保留了 git 仓库（`git init` 已做），但日常更新走 `更新网站.bat` 即可。
+
+### 其他部署途径
+
 - **Netlify / Vercel**：直接拖文件夹上传即部署。
 - 国内可放 Gitee Pages 或云厂商对象存储 + CDN。
-
-部署后把链接发给 TA 即可访问。
 
 ## 备注（留白设计）
 
